@@ -1,0 +1,31 @@
+from threading import *
+from time import *
+
+
+
+
+class even():
+    """"print the even number"""
+    def Even(self):
+        for i in range(5):
+            if (i%2 == 0):
+                print("Even number",i,current_thread().getName())
+                sleep(1)
+
+
+#class odd(Thread):
+    """"print the odd numnber"""
+    def Odd(self):
+        for i in range(5):
+            if (i%2 == 1):
+                print("odd number",i,current_thread().getName())
+                sleep(1)
+
+e1 = even()
+t1 = Thread(target=e1.Even)
+t2 = Thread(target=e1.Odd)
+
+t1.start()
+sleep(0.2)
+t2.start()
+
