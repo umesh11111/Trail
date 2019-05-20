@@ -1,0 +1,13 @@
+class SomeName:
+#magic method
+	def __add__(x,y):
+		return x+y
+				
+
+	def __str__(self,other):
+		return classobj1+classobj2
+				
+		
+classobj1= SomeName
+classobj2 =SomeName
+print(classobj1+classobj2)
